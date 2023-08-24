@@ -14,13 +14,12 @@ export default function Carrinho() {
            <Text  style={styles.nome}>Carrinho de Compras</Text>
 
            <View style={styles.fazenda}>
-             <Image source={logo}/>
-           <Text>Fazenda Etec Cidade do Livro</Text>
+             <Image source={logo} style={styles.imagemfazenda}/>
+           <Text style={styles.nomefazenda}>Fazenda Etec Cidade do Livro</Text>
            </View>
 
-           <Text>carrinho de Compras</Text>
-           <Text>Uma cesta com produtos selecionados cuidadosamente da fazenda direto para a sua cozinha.</Text>
-           <Text>R$ 40,00</Text>
+           <Text style={styles.descricao}>Uma cesta com produtos selecionados cuidadosamente da fazenda direto para a sua cozinha.</Text>
+           <Text  style={styles.preco}>R$ 40,00</Text>
          </View>
       </>
        );
@@ -39,20 +38,40 @@ const styles = StyleSheet.create({
       fontSize: 24,
       lineHeight: 26,
       padding: 16,
-      fontFamily: 'MontserratItalic'
+      fontFamily: 'MontserratBold'
     },
     carrinho:{
       paddingVertical: 8,
       paddingHorizontal: 16
     },
     nome:{
-      fontSize:26,
-      lineHeight:42,
+      fontSize: 26,
+      lineHeight: 42,
       color:"#464646",
       fontFamily: 'MontserratBold'
     },
     fazenda:{
       flexDirection: "row",
       paddingVertical: 12
+    },
+    imagemfazenda:{
+      width: 32,
+      height: 32
+    },
+    nomefazenda:{
+      fontSize: 16,
+      fontFamily: "MontserratBold",
+      lineHeight: 26,
+      marginLeft: 12
+    },
+    descricao:{
+      color: "#a3a3a3",
+      fontFamily: "MontserratItalic",
+    },
+    preco:{
+      fontSize:26,
+      fontFamily: 'MontserratRegular',
+      color:"#2a9f85",
+      marginTop: 8,
     }
   });
